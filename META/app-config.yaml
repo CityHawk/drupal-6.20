@@ -1,0 +1,17 @@
+name: Drupal
+version: 6.0
+
+webapp-configuration:
+    configuration:
+        - template: sites/default/default.settings.php.template
+          target: sites/default/settings.php
+
+create-writable-dirs:
+    - sites/default/files
+
+shared-file-system:
+    shared-folders:
+        - sites/default/files
+
+database-creation-scripts:
+    - META/sql/drupal_db.sql
